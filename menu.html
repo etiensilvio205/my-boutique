@@ -1,0 +1,48 @@
+<?php
+
+session_start():
+?>
+<!DOCTYPE html>
+<html>
+
+
+		<div class="w3-row" >
+					<div class="w3-quarter w3-container "></div>
+  
+					<div class="w3-half w3-container" style="text-align:center;">
+									<div class="w3-container w3-card-4 w3-center" style="background-color:#c2ffff;padding:8px;">
+
+										<div class="w3-container" style="background-color:#192438;text-align:center;color:#c2ffff;">
+										  <h2>myBoutique</h2>
+										 <?php  echo "<span>User: ".$_SESSION['username']."</span>"; ?>
+										</div>
+								
+											<div class="w3-row w3-center w3-container" style="text-align:center;padding:9px;">
+												<div class="w3-col s12 m6 l3 w3-center" >
+												<button class="w3-btn" style="max-width:50px;min-width:75px;"><img src="icons/sale2.png" class="w3-image"  ></button>
+												</div>
+												
+												<div class="w3-col s12 m6 l3 w3-center" >
+												<button  class="w3-btn" style="max-width:50px;min-width:75px;" ><img src="icons/search.png" class="w3-image" ></button>
+												</div>
+												
+												<div class="w3-col s12 m6 l3 w3-center" >
+												<button  class="w3-btn" style="max-width:50px;min-width:75px;"><img src="icons/customers.png" class="w3-image"  ></button>
+												</div>
+												
+												<div class="w3-col s12 m6 l3 w3-center">
+												<button  class="w3-btn" style="max-width:50px;min-width:75px;"><img src="icons/addcustomer.png" class="w3-image" ></button>
+												</div>
+											</div>
+										
+									</div>
+		
+					</div>
+	
+					<div class="w3-quarter w3-container"></div>
+	
+    
+
+
+</div>
+</html>
