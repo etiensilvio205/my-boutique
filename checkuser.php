@@ -1,5 +1,6 @@
 <?php
 
+include 'dBconnect.php';
 
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
@@ -10,11 +11,6 @@ $password="";
 $name="";
 
 
-$conn = new mysqli("85.10.205.173:3306","etienboutique","58218335","boutique");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 
 
 $names = $conn->query("SELECT username FROM admin WHERE BINARY username='$uname'");

@@ -1,5 +1,5 @@
 <?php
-
+include 'dBconnect.php';
 session_start();
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
@@ -13,12 +13,6 @@ $state="";
 
 
 
-
-$conn = new mysqli("localhost","root","","boutique");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 
 
 if (!$uname==""){
