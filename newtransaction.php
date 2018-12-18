@@ -1,5 +1,5 @@
 <?php
-
+include 'dBconnect.php';
 session_start();
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
@@ -15,11 +15,7 @@ $state="";
 $id="";
 
 
-$conn = new mysqli("localhost","root","","boutique");
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 
 
 $ids = $conn->query("SELECT id FROM customers WHERE name='$uname'");
